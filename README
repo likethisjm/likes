@@ -1,4 +1,11 @@
-echo "# likes" >> README.md
-git add README.md
-git commit -m "Add README file"
-git push origin cool-new-feature
+git init
+echo "Hello, this is file 1" > file1.txt
+echo "Hello, this is file 2" > file2.txt
+git commit -m "Add file1.txt and file2.txt"
+git checkout -b new-branch
+echo "Adding some text to file1" >> file1.txt
+echo "Adding some text to file2" >> file2.txt
+git add file1.txt file2.txt
+git commit -m "Modify file1.txt and file2.txt"
+git push origin main
+git push origin new-branch
